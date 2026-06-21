@@ -1,0 +1,75 @@
+% =============================================================================
+% Appendix Table: Leave-One-Year-Out Cross-Validation Stability
+% Reports fold-level sign and significance stability for headline coefficients.
+% Folds = 15 (one per calendar year, 2005-2019).
+% =============================================================================
+
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Leave-One-Year-Out Cross-Validation Stability (15 Folds, 2005--2019)}
+\label{tab:loo_stability}
+
+\begin{threeparttable}
+\begin{tabular}{l c c c c}
+\toprule
+ & \multicolumn{1}{c}{Full-sample}
+ & \multicolumn{1}{c}{Median}
+ & \multicolumn{1}{c}{Same-sign}
+ & \multicolumn{1}{c}{$5\%$ sig.} \\
+Variable
+ & \multicolumn{1}{c}{coef.}
+ & \multicolumn{1}{c}{coef.}
+ & \multicolumn{1}{c}{share (\%)}
+ & \multicolumn{1}{c}{share (\%)} \\
+\midrule
+\multicolumn{5}{l}{\textit{Panel A. Headline homogeneous structural variables}} \\
+\addlinespace[2pt]
+M1: Supplier HHI                & $-0.069$ & $-0.071$ & $100.0$ & $100.0$ \\
+M3A: HHI (baseline)             & $-0.286$ & $-0.284$ & $\phantom{0}93.3$  & $\phantom{0}80.0$  \\
+M3A: Supplier HHI               & $-0.066$ & $-0.066$ & $100.0$ & $\phantom{0}93.3$  \\
+\addlinespace[4pt]
+\multicolumn{5}{l}{\textit{Panel B. M3A heterogeneous HHI sector interactions}} \\
+\addlinespace[2pt]
+HHI $\times$ Health Care        & $\phantom{-}0.372$ & $\phantom{-}0.373$ & $\phantom{0}93.3$  & $\phantom{0}80.0$  \\
+HHI $\times$ Industrials        & $\phantom{-}0.316$ & $\phantom{-}0.320$ & $\phantom{0}93.3$  & $\phantom{0}80.0$  \\
+HHI $\times$ Energy             & $\phantom{-}0.305$ & $\phantom{-}0.302$ & $\phantom{0}93.3$  & $\phantom{0}80.0$  \\
+HHI $\times$ Real Estate        & $\phantom{-}0.705$ & $\phantom{-}0.686$ & $\phantom{0}93.3$  & $\phantom{0}26.7$  \\
+\addlinespace[4pt]
+\multicolumn{5}{l}{\textit{Panel C. M3B and M3C upstream-channel sector interactions}} \\
+\addlinespace[2pt]
+M3B: SuppHHI $\times$ Real Estate     & $\phantom{-}0.340$ & $\phantom{-}0.339$ & $\phantom{0}80.0$ & $\phantom{0}26.7$ \\
+M3B: SuppHHI $\times$ Financials      & $\phantom{-}0.578$ & $\phantom{-}0.577$ & $\phantom{0}93.3$ & $\phantom{0}13.3$ \\
+M3B: SuppHHI $\times$ Health Care     & $\phantom{-}0.491$ & $\phantom{-}0.500$ & $\phantom{0}93.3$ & $\phantom{0}13.3$ \\
+M3B: SuppHHI $\times$ Industrials     & $\phantom{-}0.329$ & $\phantom{-}0.332$ & $\phantom{0}93.3$ & $\phantom{0}13.3$ \\
+M3C: SuppHHI $\times$ Real Estate     & $\phantom{-}0.728$ & $\phantom{-}0.725$ & $\phantom{0}80.0$ & $\phantom{0}93.3$ \\
+M3C: SuppHHI $\times$ Industrials     & $\phantom{-}0.605$ & $\phantom{-}0.616$ & $\phantom{0}93.3$ & $\phantom{0}66.7$ \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes.} Each row reports stability statistics from a
+leave-one-year-out cross-validation that re-estimates the parent specification
+fifteen times, dropping one calendar year from the in-sample training window
+(January~2005 through December~2019) on each fold. The estimation specification
+matches the in-sample inference exactly, with two-way (entity and time) fixed
+effects and entity-clustered standard errors, restricted to the 2005--2019
+training window. The Same-sign share is the percentage of folds in which the
+re-estimated coefficient retains the same sign as the full-sample (no-fold-out)
+estimate on the same window. The $5\%$ sig.\ share is the percentage of folds
+in which the re-estimated coefficient is significant at the $5\%$ level under
+entity-clustered standard errors. Full-sample and median coefficients are
+reported on the 2005--2019 training window used by the LOO exercise. They
+may differ in magnitude from the corresponding figures in
+Tables~\ref{tab:main_results} and~\ref{tab:extended_results}, which are
+estimated on the full 2005--February~2026 sample. The reported stability
+properties (same-sign and significance shares) are interpretable directly
+and do not depend on the magnitude offset. Variables not listed here either
+are not flagged for stability scrutiny by the Driscoll--Kraay exercise in
+Table~\ref{tab:dk_robustness} or do not have a sufficient role in the
+headline narrative to warrant fold-level reporting.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{table}

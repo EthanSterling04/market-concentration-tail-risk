@@ -1,0 +1,88 @@
+% =============================================================================
+% Table 2: Upstream-Channel Sector Decomposition (M3B and M3C)
+% Two-way fixed effects throughout. Entity-clustered SEs.
+% Reports the Supplier HHI x sector interactions, which are the
+% genuinely novel content of M3B and M3C relative to M3A. The full
+% set of M3B HHI x sector interactions, including the Financials
+% sign-flip discussed in the text, is reported in
+% Appendix Table A.1 (tab:appendix_m3b_hhi_interactions).
+% =============================================================================
+
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Upstream-Channel Sector Decomposition: Kitchen Sink (M3B) and Alternating (M3C) Specifications}
+\label{tab:extended_results}
+
+\begin{threeparttable}
+\begin{tabular}{l c c}
+\toprule
+ & (1) & (2) \\
+ & \textbf{M3B: Kitchen Sink} & \textbf{M3C: Alternating} \\
+\midrule
+\multicolumn{3}{l}{\textit{Panel A. Homogeneous structural predictors}} \\
+\addlinespace[2pt]
+HHI                                & $-0.0996^{***}$ & $-0.0174$       \\
+                                   & $(-5.65)$       & $(-1.41)$       \\
+Supplier HHI                       & $0.0281$        & $0.0281$        \\
+                                   & $(0.57)$        & $(0.50)$        \\
+\addlinespace[4pt]
+\multicolumn{3}{l}{\textit{Panel B. Sector $\times$ Supplier HHI interactions}} \\
+\addlinespace[2pt]
+SuppHHI $\times$ Real Estate        & $0.406^{***}$   & $0.362^{***}$   \\
+                                    & $(4.06)$        & $(3.26)$        \\
+SuppHHI $\times$ Financials         & $0.298^{***}$   & $0.078$         \\
+                                    & $(3.02)$        & $(0.89)$        \\
+SuppHHI $\times$ Health Care        & $0.195^{***}$   & $0.062$         \\
+                                    & $(3.01)$        & $(1.11)$        \\
+SuppHHI $\times$ Industrials        & $0.118^{***}$   & $0.121^{**}$    \\
+                                    & $(3.33)$        & $(2.38)$        \\
+SuppHHI $\times$ Energy             & $0.055$         & $0.084$         \\
+                                    & $(1.07)$        & $(1.41)$        \\
+SuppHHI $\times$ Materials          & $0.006$         & $-0.018$        \\
+                                    & $(0.13)$        & $(-0.41)$       \\
+SuppHHI $\times$ Consumer Staples   & $-0.015$        & $-0.036$        \\
+                                    & $(-0.25)$       & $(-0.82)$       \\
+SuppHHI $\times$ Technology         & $-0.016$        & $-0.072$        \\
+                                    & $(-0.27)$       & $(-1.40)$       \\
+SuppHHI $\times$ Cons.\ Discr.      & $-0.030$        & $-0.085$        \\
+                                    & $(-0.51)$       & $(-1.46)$       \\
+SuppHHI $\times$ Utilities          & $-0.070^{*}$    & $-0.088^{**}$   \\
+                                    & $(-1.68)$       & $(-2.14)$       \\
+\addlinespace[4pt]
+\multicolumn{3}{l}{\textit{Panel C. Controls}} \\
+\addlinespace[2pt]
+ATM IV                              & $0.0016$        & $0.0014$        \\
+                                    & $(0.18)$        & $(0.18)$        \\
+Total Return Index                  & $1.60\!\times\!10^{-5}$ & $2.24\!\times\!10^{-5}$ \\
+                                    & $(0.66)$        & $(1.00)$        \\
+\midrule
+Sector $\times$ HHI (M3B)           & See App.\ Table~\ref{tab:appendix_m3b_hhi_interactions} & --- \\
+Entity FE                           & Yes             & Yes             \\
+Time FE                             & Yes             & Yes             \\
+Observations                        & 2{,}425         & 2{,}425         \\
+$R^2$ (within)                      & $0.005$         & $-0.003$        \\
+$F$-statistic                       & $1.77$          & $2.21$          \\
+$F$ $p$-value                       & $0.012$         & $0.006$         \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes.} Reference category for sector dummies is Communication.
+$t$-statistics in parentheses, entity-clustered. Significance:
+$^{*}\,p<0.10$, $^{**}\,p<0.05$, $^{***}\,p<0.01$. M3B additionally includes
+ten HHI~$\times$~sector interaction terms (the same heterogeneous internal
+HHI structure as M3A); for compactness these are reported in Appendix
+Table~\ref{tab:appendix_m3b_hhi_interactions}, where the Financials HHI
+interaction sign-flip relative to M3A is also discussed. The M3B and M3C
+upstream-channel sector interactions reported here lose significance under
+Driscoll--Kraay standard errors and exhibit fold-to-fold instability under
+leave-one-year-out cross-validation. We therefore treat M3B and M3C as
+exploratory diagnostics for identifying \emph{which} sectors plausibly carry
+the upstream channel, rather than as confirmatory point estimates. See
+Section~5.3.2 and Appendix~\ref{appendix:robustness}.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{table}

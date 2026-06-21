@@ -1,0 +1,68 @@
+% =============================================================================
+% Table 1: Main In-Sample Results
+% Models 1, 2, and 3A. Two-way (entity + time) fixed effects.
+% Standard errors clustered at the entity level; t-stats in parentheses.
+% Homogeneous structural predictors and controls only. The full set of
+% sector x HHI interaction terms in Model 3A is reported separately in
+% Table 4 (net sector effects) to avoid duplication.
+% =============================================================================
+
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Main In-Sample Results: Forward Risk Reversal Predictive Regressions}
+\label{tab:main_results}
+
+\begin{threeparttable}
+\begin{tabular}{l c c c}
+\toprule
+ & (1) & (2) & (3) \\
+ & \textbf{M1: Baseline} & \textbf{M2: Hub Shock} & \textbf{M3A: Het.\ HHI} \\
+\midrule
+\multicolumn{4}{l}{\textit{Panel A. Homogeneous structural predictors}} \\
+\addlinespace[2pt]
+HHI                          & $-0.0073$       & $0.0023$        & $-0.0859^{***}$ \\
+                             & $(-1.06)$       & $(0.21)$        & $(-4.94)$       \\
+Supplier HHI                 & $-0.0758^{***}$ &                 & $-0.0632^{***}$ \\
+                             & $(-5.22)$       &                 & $(-4.65)$       \\
+Hub Shock                    &                 & $0.0014^{**}$   &                 \\
+                             &                 & $(2.53)$        &                 \\
+\addlinespace[4pt]
+\multicolumn{4}{l}{\textit{Panel B. Controls}} \\
+\addlinespace[2pt]
+ATM IV                       & $0.0032$        & $0.0042$        & $0.0056$        \\
+                             & $(0.40)$        & $(0.55)$        & $(0.65)$        \\
+Total Return Index           & $4.41\!\times\!10^{-5\,***}$ & $2.31\!\times\!10^{-5}$ & $5.04\!\times\!10^{-5\,**}$ \\
+                             & $(2.91)$        & $(1.29)$        & $(2.40)$        \\
+\midrule
+Sector $\times$ HHI (M3A)    & ---             & ---             & See Table~\ref{tab:net_sector_effects} \\
+Entity FE                    & Yes             & Yes             & Yes             \\
+Time FE                      & Yes             & Yes             & Yes             \\
+Observations                 & 2{,}425         & 2{,}425         & 2{,}425         \\
+$R^2$ (within)               & $-0.052$        & $-0.018$        & $-0.035$        \\
+$F$-statistic                & $4.07$          & $1.50$          & $1.82$          \\
+$F$ $p$-value                & $0.003$         & $0.200$         & $0.031$         \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes.} Dependent variable is the one-month-ahead 25-delta implied
+volatility risk reversal, $RR_{j,t+1}$. $t$-statistics in parentheses, computed
+from standard errors clustered at the entity (sector ETF) level. Significance:
+$^{*}\,p<0.10$, $^{**}\,p<0.05$, $^{***}\,p<0.01$. The panel covers 11 sector
+ETFs over 247 months (Jan 2005 -- Feb 2026), unbalanced due to the post-sample
+launch of XLRE (2015) and XLC (2018). Model~3A allows the HHI loading to vary
+by sector via interactions with sector indicators (Communication omitted as the
+reference category); the homogeneous baseline HHI coefficient reported in column~3
+identifies the loading for the omitted reference sector, and the ten net
+sector-specific HHI effects (homogeneous baseline plus interaction) are reported
+in Table~\ref{tab:net_sector_effects}. Negative within-$R^{2}$ values arise
+because the time and entity fixed effects absorb a substantial share of the
+variation in $RR_{j,t+1}$ relative to what the structural regressors recover;
+inference rests on the joint $F$-test and the individual coefficient $t$-statistics
+rather than on $R^{2}$.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{table}

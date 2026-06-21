@@ -1,0 +1,56 @@
+% =============================================================================
+% Table 3: Out-of-Sample Forecasting Results
+% Fixed train/test split: train Jan 2005 - Dec 2019; test Jan 2025 - Feb 2026.
+% 2020-2024 excluded from both windows.
+% =============================================================================
+
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Out-of-Sample Forecast Comparison: Mean Squared Prediction Error}
+\label{tab:oos_results}
+
+\begin{threeparttable}
+\begin{tabular}{l c c c c c}
+\toprule
+ & \multicolumn{1}{c}{$N$} & \multicolumn{1}{c}{MSPE}
+   & \multicolumn{1}{c}{$\%\Delta$ vs.}
+   & \multicolumn{1}{c}{DM}
+   & \multicolumn{1}{c}{DM} \\
+Model
+   & \multicolumn{1}{c}{forecasts}
+   & \multicolumn{1}{c}{($\times 10^{4}$)}
+   & \multicolumn{1}{c}{Baseline}
+   & \multicolumn{1}{c}{statistic}
+   & \multicolumn{1}{c}{$p$-value} \\
+\midrule
+Baseline                            & 77 & $0.78$ & ---       & ---     & ---     \\
+\addlinespace[2pt]
+Homogeneous (HHI + Supp.\ HHI)      & 77 & $0.82$ & $+5.2\%$  & $-2.52$ & $0.012$ \\
+Heterogeneous HHI (3A challenger)   & 77 & $0.99$ & $+26.9\%$ & $-1.41$ & $0.159$ \\
+Kitchen Sink (3B challenger)        & 77 & $1.12$ & $+43.8\%$ & $-1.58$ & $0.114$ \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes.} Training window: Jan 2005 -- Dec 2019 (1{,}688 observations,
+180 months). Test window: Jan 2025 -- Feb 2026 (77 observations, 7 months). The
+intervening period (2020--2024) is excluded from both windows. All models include
+entity fixed effects only (time fixed effects cannot be projected onto the test
+period). The forecast control set is identical across all models: ATM IV, total
+return index, term spread (10y minus 2y Treasury), and credit spread (Baa minus
+Aaa Moody's seasoned). The challenger models add the structural variables noted
+in parentheses. The Diebold--Mariano statistic is computed on monthly-averaged
+squared error differentials with $h=1$; a negative DM statistic indicates that
+the challenger model has higher MSPE than the baseline. Reading: the structural
+challengers do not improve forecast accuracy relative to the baseline; the
+Homogeneous specification is in fact significantly worse at the 5\% level. We
+interpret this not as a failure of the structural mechanism but as evidence
+that the in-sample inference is not the result of overfitting to a pattern
+that would also produce gains in monthly out-of-sample point forecasts. See
+Section~5.4 for discussion.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{table}

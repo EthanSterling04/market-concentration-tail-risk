@@ -1,0 +1,70 @@
+% =============================================================================
+% Table 4: Net Sector-Specific HHI Effects (Model 3A)
+% This is the key interpretive table accompanying Figure 1. Shows
+% baseline + interaction = net effect, with significance under both
+% clustered SEs and Driscoll-Kraay (bandwidth 6) for transparency.
+% Communication is the omitted reference, baseline only.
+% =============================================================================
+
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Net Sector-Specific HHI Effects on Forward Risk Reversal (Model 3A)}
+\label{tab:net_sector_effects}
+
+\begin{threeparttable}
+\begin{tabular}{l c c c c c}
+\toprule
+ & \multicolumn{1}{c}{Baseline} 
+ & \multicolumn{1}{c}{Sector}
+ & \multicolumn{1}{c}{Net effect}
+ & \multicolumn{1}{c}{Interaction $t$}
+ & \multicolumn{1}{c}{Interaction $t$} \\
+Sector
+ & \multicolumn{1}{c}{(omitted)}
+ & \multicolumn{1}{c}{interaction}
+ & \multicolumn{1}{c}{(sum)}
+ & \multicolumn{1}{c}{(clustered)}
+ & \multicolumn{1}{c}{(DK, bw $=6$)} \\
+\midrule
+\multicolumn{6}{l}{\textit{Sectors with positive net effect (consistent with $\sigma < 1$ regime)}} \\
+\addlinespace[2pt]
+Real Estate            & $-0.086$ & $+0.298$ & $+0.212$ & $\phantom{-}3.52^{***}$ & $\phantom{-}0.95\phantom{^{*}}$ \\
+Health Care            & $-0.086$ & $+0.163$ & $+0.077$ & $\phantom{-}3.18^{***}$ & $\phantom{-}2.29^{**\phantom{*}}$ \\
+Utilities              & $-0.086$ & $+0.138$ & $+0.052$ & $\phantom{-}1.35\phantom{^{*}}$ & $\phantom{-}0.67\phantom{^{*}}$ \\
+Materials              & $-0.086$ & $+0.125$ & $+0.039$ & $\phantom{-}4.29^{***}$ & $\phantom{-}2.18^{**\phantom{*}}$ \\
+Industrials            & $-0.086$ & $+0.110$ & $+0.024$ & $\phantom{-}5.68^{***}$ & $\phantom{-}2.54^{**\phantom{*}}$ \\
+Energy                 & $-0.086$ & $+0.107$ & $+0.021$ & $\phantom{-}4.49^{***}$ & $\phantom{-}2.94^{***}$ \\
+Consumer Staples       & $-0.086$ & $+0.101$ & $+0.015$ & $\phantom{-}3.90^{***}$ & $\phantom{-}1.90^{*\phantom{**}}$ \\
+\addlinespace[4pt]
+\multicolumn{6}{l}{\textit{Sectors with negative or near-zero net effect (consistent with $\sigma \approx 1$ regime)}} \\
+\addlinespace[2pt]
+Consumer Discretionary & $-0.086$ & $+0.059$ & $-0.027$ & $\phantom{-}3.20^{***}$ & $\phantom{-}1.60\phantom{^{*}}$ \\
+Financials             & $-0.086$ & $+0.039$ & $-0.047$ & $\phantom{-}0.51\phantom{^{*}}$ & $\phantom{-}0.23\phantom{^{*}}$ \\
+Technology             & $-0.086$ & $+0.013$ & $-0.073$ & $\phantom{-}0.51\phantom{^{*}}$ & $\phantom{-}0.24\phantom{^{*}}$ \\
+Communication (ref.)   & $-0.086$ &  ---     & $-0.086$ & $-4.94^{***}$ & $-2.59^{***}$ \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes.} Net effect on $RR_{j,t+1}$ of a one-unit change in $HHI_{j,t}$
+under Model 3A, computed as the homogeneous baseline coefficient
+($\hat{\beta}_{\text{HHI}} = -0.086$, the coefficient for the omitted
+Communication category) plus the relevant sector interaction term. Reported
+$t$-statistics test the null that the sector \emph{interaction} term equals
+zero, i.e.\ that the sector's HHI loading equals Communication's, not the
+joint null that the net effect itself equals zero. The Communication row
+reports the baseline coefficient and its $t$-statistic directly. Significance:
+$^{*}\,p<0.10$, $^{**}\,p<0.05$, $^{***}\,p<0.01$. Driscoll--Kraay
+(DK) standard errors use a Bartlett kernel with bandwidth six. The grouping
+into ``positive'' and ``negative or near-zero'' net-effect bins maps onto the
+substitutability gradient discussed in Section~5.3: physical-capital-intensive
+sectors with low effective elasticity of substitution (top group) load
+positively on internal concentration, whereas digital and platform-economy
+sectors (bottom group) load negatively or insignificantly, consistent with
+the network curvature mechanism in equation~(\ref{eq:curvature}).
+\end{tablenotes}
+\end{threeparttable}
+
+\end{table}

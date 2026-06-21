@@ -1,0 +1,76 @@
+% =============================================================================
+% Appendix Extended Results Table: M3B HHI x Sector Interactions
+% Houses the M3B HHI x sector interaction terms that were previously
+% reported in main Table 2 Panel B. Includes the Financials sign-flip
+% relative to M3A, which is the substantive content motivating the table.
+% Referenced from Results Section 5.3.2 and from main Table 2 footer.
+% =============================================================================
+
+\begin{table}[!htbp]
+\centering
+\small
+\caption{M3B Internal-HHI Sector Interactions and Comparison with M3A}
+\label{tab:appendix_m3b_hhi_interactions}
+
+\begin{threeparttable}
+\begin{tabular}{l c c}
+\toprule
+ & (1) & (2) \\
+ & \textbf{M3A interaction} & \textbf{M3B interaction} \\
+\midrule
+HHI $\times$ Real Estate            & $0.298^{***}$   & $0.333^{***}$   \\
+                                    & $(3.52)$        & $(3.56)$        \\
+HHI $\times$ Health Care            & $0.163^{***}$   & $0.034$         \\
+                                    & $(3.18)$        & $(0.44)$        \\
+HHI $\times$ Utilities              & $0.138$         & $0.280^{***}$   \\
+                                    & $(1.35)$        & $(2.65)$        \\
+HHI $\times$ Materials              & $0.125^{***}$   & $0.132^{***}$   \\
+                                    & $(4.29)$        & $(6.21)$        \\
+HHI $\times$ Industrials            & $0.110^{***}$   & $0.123^{***}$   \\
+                                    & $(5.68)$        & $(4.20)$        \\
+HHI $\times$ Energy                 & $0.107^{***}$   & $0.121^{***}$   \\
+                                    & $(4.49)$        & $(4.34)$        \\
+HHI $\times$ Consumer Staples       & $0.101^{***}$   & $0.114^{***}$   \\
+                                    & $(3.90)$        & $(3.29)$        \\
+HHI $\times$ Consumer Discretionary & $0.059^{***}$   & $0.077^{***}$   \\
+                                    & $(3.20)$        & $(3.99)$        \\
+HHI $\times$ Financials             & $0.039$         & $-0.365^{***}$  \\
+                                    & $(0.51)$        & $(-2.86)$       \\
+HHI $\times$ Technology             & $0.013$         & $0.044$         \\
+                                    & $(0.51)$        & $(1.53)$        \\
+\midrule
+Homogeneous baseline HHI            & $-0.0859^{***}$ & $-0.0996^{***}$ \\
+                                    & $(-4.94)$       & $(-5.65)$       \\
+Supplier HHI structure              & Homogeneous     & Het.\ by sector \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes.} Communication is the omitted reference sector. Each row
+reports the differential HHI loading for the named sector relative to
+Communication, identified by the interaction term $D_j \times HHI_{j,t}$ in
+equations~\eqref{eq:model3a} and~\eqref{eq:model3b}. The M3A column repeats
+the interactions from Table~\ref{tab:net_sector_effects} for direct comparison.
+$t$-statistics in parentheses, entity-clustered. Significance: $^{*}\,p<0.10$,
+$^{**}\,p<0.05$, $^{***}\,p<0.01$.
+\item The Financials HHI interaction reverses sign between M3A ($+0.039$,
+$t=0.51$, statistically indistinguishable from the omitted Communication
+baseline) and M3B ($-0.365$, $t=-2.86$). This sign-flip is consistent with
+multicollinearity between the heterogeneous HHI and heterogeneous Supplier HHI
+columns when both are included simultaneously. Within Financials, internal
+HHI and Supplier HHI co-move strongly across the sample, so the M3B saturated
+specification distributes a single underlying loading across two collinear
+regressors and produces an unstable point estimate on each. The Health Care
+HHI interaction also attenuates substantially in M3B ($+0.034$, $t=0.44$)
+relative to M3A ($+0.163$, $t=3.18$), and the Health Care Supplier HHI
+interaction in M3B is correspondingly large and significant
+($+0.195$, $t=3.01$ in main Table~\ref{tab:extended_results}); the same
+multicollinearity logic plausibly applies. The seven other HHI sector
+interactions are stable in sign and magnitude between M3A and M3B.
+\item This table is referenced from Section~5.3.2 of the main text and from
+the footer of main Table~\ref{tab:extended_results}.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{table}
